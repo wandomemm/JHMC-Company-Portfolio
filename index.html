@@ -6,10 +6,10 @@
     <title>JHMC Company Profile</title>
     
     <!-- Load jQuery first -->
-    <script type="text/javascript" src="../../extras/jquery.min.js"></script>
+    <script type="text/javascript" src="extras/jquery.min.js"></script>
     
     <!-- Load CSS -->
-    <link rel="stylesheet" href="css/double-page.css">
+    <link rel="stylesheet" href="css/basic.css">
 </head>
 <body>
 
@@ -32,15 +32,15 @@
             <div class="single" style="background-image:url(pages/JHMC_page11.png)"></div>
             <div class="single" style="background-image:url(pages/JHMC_page12.png)"></div>
             <div class="single" style="background-image:url(pages/JHMC_page13.png)"></div>
-			<div class="single" style="background-image:url(pages/JHMC_page15.png)"></div>
+            <div class="single" style="background-image:url(pages/JHMC_page14.png)"></div>
             <div class="page" style="background-image:url(pages/JHMC_cover-back.png)"></div>
         </div>
     </div>
 </div>
 
 <!-- Load turn.js and other libraries AFTER the HTML content -->
-<script type="text/javascript" src="../../lib/turn.min.js"></script>
-<script type="text/javascript" src="../../lib/scissor.min.js"></script>
+<script type="text/javascript" src="lib/turn.min.js"></script>
+<script type="text/javascript" src="lib/scissor.min.js"></script>
 
 <script type="text/javascript">
 // Wait for the page to fully load
@@ -57,14 +57,14 @@ $(window).on('load', function() {
         // Apply scissor for double pages
         $('.flipbook .double').scissor();
 
-        // Create the flipbook with scaled A4 landscape dimensions
+        // Create the flipbook with proper dimensions
         $('.flipbook').turn({
             elevation: 50,
             gradients: true,
             autoCenter: true,
             display: 'double',
-            width: 1685,    // Scaled width (2246 * 0.75)
-            height: 596,    // Scaled height (794 * 0.75)
+            width: 1200,    // Adjusted width
+            height: 800,    // Adjusted height
             duration: 1500
         });
     }
