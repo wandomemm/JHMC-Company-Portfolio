@@ -1,4 +1,10 @@
 /* Basic sample */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     overflow: hidden;
     background-color: #fcfcfc;
@@ -6,6 +12,7 @@ body {
     padding: 0;
     width: 100vw;
     height: 100vh;
+    font-family: Arial, sans-serif;
 }
 
 .flipbook-viewport {
@@ -36,9 +43,6 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-}
-
-.flipbook .page {
     box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
 
