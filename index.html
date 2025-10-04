@@ -6,7 +6,7 @@
     <title>JHMC Company Profile</title>
     
     <!-- Load jQuery first -->
-    <script type="text/javascript" src="extras/jquery.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     
     <!-- Load CSS -->
     <link rel="stylesheet" href="css/basic.css">
@@ -38,9 +38,8 @@
     </div>
 </div>
 
-<!-- Load turn.js and other libraries AFTER the HTML content -->
-<script type="text/javascript" src="lib/turn.min.js"></script>
-<script type="text/javascript" src="lib/scissor.min.js"></script>
+<!-- Load turn.js from CDN -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/3.3.0/turn.min.js"></script>
 
 <script type="text/javascript">
 // Wait for the page to fully load
@@ -54,17 +53,14 @@ $(window).on('load', function() {
             return;
         }
 
-        // Apply scissor for double pages
-        $('.flipbook .double').scissor();
-
         // Create the flipbook with proper dimensions
         $('.flipbook').turn({
             elevation: 50,
             gradients: true,
             autoCenter: true,
             display: 'double',
-            width: 1200,    // Adjusted width
-            height: 800,    // Adjusted height
+            width: 1200,
+            height: 800,
             duration: 1500
         });
     }
