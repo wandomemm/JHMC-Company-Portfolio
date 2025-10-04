@@ -25,16 +25,16 @@ body {
 }
 
 .flipbook-viewport .flipbook {
-    width: 1685px;  /* Scaled width (75% of original) */
-    height: 596px;  /* Scaled height (75% of original) */
+    width: 1200px;
+    height: 800px;
 }
 
 .flipbook-viewport .page {
-    width: 843px;   /* Scaled single page width */
-    height: 596px;  /* Scaled single page height */
+    width: 600px;
+    height: 800px;
     background-color: white;
     background-repeat: no-repeat;
-    background-size: contain;  /* Changed from cover to contain */
+    background-size: contain;
     background-position: center;
 }
 
@@ -53,16 +53,16 @@ body {
 }
 
 .flipbook-viewport .double {
-    width: 1685px;
-    height: 596px;
-    background-size: contain;  /* Changed from cover to contain */
+    width: 1200px;
+    height: 800px;
+    background-size: contain;
     background-position: center;
 }
 
 .flipbook-viewport .single {
-    width: 843px;
-    height: 596px;
-    background-size: contain;  /* Changed from cover to contain */
+    width: 600px;
+    height: 800px;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
 }
