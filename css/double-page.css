@@ -1,10 +1,4 @@
 /* Basic sample */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     overflow: hidden;
     background-color: #fcfcfc;
@@ -12,7 +6,6 @@ body {
     padding: 0;
     width: 100vw;
     height: 100vh;
-    font-family: Arial, sans-serif;
 }
 
 .flipbook-viewport {
@@ -32,17 +25,20 @@ body {
 }
 
 .flipbook-viewport .flipbook {
-    width: 1200px;
-    height: 800px;
+    width: 1685px;  /* Scaled width (75% of original) */
+    height: 596px;  /* Scaled height (75% of original) */
 }
 
 .flipbook-viewport .page {
-    width: 600px;
-    height: 800px;
+    width: 843px;   /* Scaled single page width */
+    height: 596px;  /* Scaled single page height */
     background-color: white;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: contain;  /* Changed from cover to contain */
     background-position: center;
+}
+
+.flipbook .page {
     box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
 
@@ -57,16 +53,16 @@ body {
 }
 
 .flipbook-viewport .double {
-    width: 1200px;
-    height: 800px;
-    background-size: contain;
+    width: 1685px;
+    height: 596px;
+    background-size: contain;  /* Changed from cover to contain */
     background-position: center;
 }
 
 .flipbook-viewport .single {
-    width: 600px;
-    height: 800px;
-    background-size: contain;
+    width: 843px;
+    height: 596px;
+    background-size: contain;  /* Changed from cover to contain */
     background-position: center;
     background-repeat: no-repeat;
 }
