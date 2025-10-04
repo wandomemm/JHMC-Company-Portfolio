@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JHMC Company Profile</title>
+    
+    <!-- Load jQuery first -->
+    <script type="text/javascript" src="../../extras/jquery.min.js"></script>
+    
+    <!-- Load CSS -->
+    <link rel="stylesheet" href="css/double-page.css">
+</head>
+<body>
+
+<div class="flipbook-viewport">
+    <div class="container">
+        <div class="flipbook">
+            <div class="page" style="background-image:url(pages/JHMC_cover-front.png)"></div>
+            <div class="single" style="background-image:url(pages/JHMC_page01.png)"></div>
+            <div class="single" style="background-image:url(pages/JHMC_page1.png)"></div>
+            <div class="single" style="background-image:url(pages/JHMC_page2.png)"></div>
+            <div class="single" style="background-image:url(pages/JHMC_page02.png)"></div>
+            <div class="single" style="background-image:url(pages/JHMC_page3.png)"></div>
+            <div class="single" style="background-image:url(pages/JHMC_page4.png)"></div>
+            <div class="single" style="background-image:url(pages/JHMC_page5.png)"></div>
+            <div class="single" style="background-image:url(pages/JHMC_page6.png)"></div>
+            <div class="single" style="background-image:url(pages/JHMC_page7.png)"></div>
+            <div class="single" style="background-image:url(pages/JHMC_page8.png)"></div>
+            <div class="single" style="background-image:url(pages/JHMC_page9.png)"></div>
+            <div class="single" style="background-image:url(pages/JHMC_page10.png)"></div>
+            <div class="single" style="background-image:url(pages/JHMC_page11.png)"></div>
+            <div class="single" style="background-image:url(pages/JHMC_page12.png)"></div>
+            <div class="single" style="background-image:url(pages/JHMC_page13.png)"></div>
+			<div class="single" style="background-image:url(pages/JHMC_page15.png)"></div>
+            <div class="page" style="background-image:url(pages/JHMC_cover-back.png)"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Load turn.js and other libraries AFTER the HTML content -->
+<script type="text/javascript" src="../../lib/turn.min.js"></script>
+<script type="text/javascript" src="../../lib/scissor.min.js"></script>
+
+<script type="text/javascript">
+// Wait for the page to fully load
+$(window).on('load', function() {
+    function loadApp() {
+        var flipbook = $('.flipbook');
+
+        // Check if the CSS was already loaded
+        if (flipbook.width() == 0 || flipbook.height() == 0) {
+            setTimeout(loadApp, 10);
+            return;
+        }
+
+        // Apply scissor for double pages
+        $('.flipbook .double').scissor();
+
+        // Create the flipbook with scaled A4 landscape dimensions
+        $('.flipbook').turn({
+            elevation: 50,
+            gradients: true,
+            autoCenter: true,
+            display: 'double',
+            width: 1685,    // Scaled width (2246 * 0.75)
+            height: 596,    // Scaled height (794 * 0.75)
+            duration: 1500
+        });
+    }
+
+    // Start the application
+    loadApp();
+});
+</script>
+
+</body>
+</html>
